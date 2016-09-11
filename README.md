@@ -1,10 +1,10 @@
 # Pre-work - TipCalc
 
-TipCalc is a tip calculator application for iOS.
+TipCalc is a tip calculator application for iOS written in Swift.
 
 Submitted by: audsinthecity
 
-Time spent: 2 hours spent in total
+Time spent: 8 hours spent in total (2 hours initial version, 6 hours for extensions)
 
 ## User Stories
 
@@ -14,26 +14,35 @@ The following **required** functionality is complete:
 * [X] Settings page to change the default tip percentage.
 
 The following **optional** features are implemented:
-* [ ] UI animations
+* [X] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [X] Color theme choice in settings
+- [X] Initial startup screen animation
+- [X] Default breakouts for 2, 3, and 4 diners
+- [X] Appropriate icons - such as number of diners, settings cog, App Icon on phone
+- [X] UI look and feel improvements - background colors, font size and color (Futura, dark grey)
+
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/jA8ihaK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/yyn0gWh' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Getting used to hooking up different views in Main.storyboard - it's not always apparent how to undo a connection.
+Spent a lot of time trying different things and cobbling together solutions from StackOverflow, online tutorials, videos, official documentation, etc. Since I also design, fair bit of effort on aesthetic aspects in addition to just the code. One thing that was still not fully resolved is using a UIView as a "partial background" and moving it to the back so that you can still work with other elements - tried ordering in Storyboard, using the z position, sendSubviewToBack. In some cases, I am guessing there is redundant code, perhaps when working with user defaults, but I'm not familiar enough with this yet to be more efficient.
+Initial notes - Getting used to hooking up different views in Main.storyboard - it's not always apparent how to undo a connection.
+
+If it's important that I implement all of the optional features to have a better shot at joining the program, let me know and I will make it happen.
+
 
 ## License
 
