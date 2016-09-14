@@ -60,9 +60,7 @@ class SettingsViewController: UIViewController {
         defaults.setDouble(tipPercentagesDefault[defaultSelector.selectedSegmentIndex], forKey: "default_tip")
         defaults.setInteger(defaultSelector.selectedSegmentIndex, forKey: "default_tip_selection")
         defaults.synchronize()
-        
-        //print (tipPercentagesDefault[defaultSelector.selectedSegmentIndex])
-        //print(defaultSelector.selectedSegmentIndex)
+
     }
     
     /*
