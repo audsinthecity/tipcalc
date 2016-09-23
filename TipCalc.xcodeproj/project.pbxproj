@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					76A5E26B1D6BDDC1002E2A56 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZUXFDQMF78;
 					};
 					76A5E27F1D6BDDC1002E2A56 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -403,10 +404,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.auds.TipCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -414,10 +418,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.auds.TipCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -486,6 +493,7 @@
 				76A5E2961D6BDDC1002E2A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76A5E2971D6BDDC1002E2A56 /* Build configuration list for PBXNativeTarget "TipCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +502,7 @@
 				76A5E2991D6BDDC1002E2A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76A5E29A1D6BDDC1002E2A56 /* Build configuration list for PBXNativeTarget "TipCalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +511,7 @@
 				76A5E29C1D6BDDC1002E2A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

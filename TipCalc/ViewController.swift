@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Foundation
+import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
@@ -156,6 +158,47 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func screenShotMethod(sender: AnyObject) {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
     
+}
+
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+    mailComposerVC.setToRecipients(["someone@somewhere.com"])
+        mailComposerVC.setSubject("Sending you an in-app e-mail...")
+        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        print("Mail success!")
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        //let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail. Please check e-mail configuration and try again.", preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action:UIAlertAction!) in
+            print("you have pressed the Cancel button");
+        }
+        sendMailErrorAlert.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+            print("you have pressed OK button");
+        }
+        sendMailErrorAlert.addAction(OKAction)
+        
+        self.presentViewController(sendMailErrorAlert, animated: true, completion:nil)
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+}
+
 }
 

@@ -150,6 +150,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="TipCalc" id="xqb-XX-prQ">
+                        <barButtonItem key="leftBarButtonItem" image="email-icon" id="aLb-xy-HLk">
+                            <connections>
+                                <action selector="screenShotMethod:" destination="BYZ-38-t0r" id="KGc-PT-qHD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="geariconsmall" id="8du-lU-N3O">
                             <connections>
                                 <segue destination="QDo-Lj-Zwv" kind="push" id="MIH-tu-e3S"/>
@@ -256,6 +261,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="email-icon" width="40" height="40"/>
         <image name="geariconsmall" width="30" height="30"/>
         <image name="usericonsmall" width="30" height="30"/>
     </resources>
